@@ -1,0 +1,107 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: url('background.jpg');
+    background-size: cover;
+    padding: 10px;
+}
+.todo-app{
+    width:100%;
+    max-width: 540px;
+    background:transparent;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.9);
+    backdrop-filter: blur(2px);
+    color:#fff;
+    margin:100px auto 20px;
+    padding: 40px 30px 70px; 
+    border-radius: 10px;
+}
+.todo-app h2{
+    font-size: 2rem;
+    background-clip: text;
+    color:transparent;
+    background-image:radial-gradient(circle,#ff8a00,#e52e71);
+}
+.row{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background: #edeef0;
+   border-radius: 30px;
+   padding-left: 20px;
+   margin-bottom: 25px;
+   
+}
+input{
+    flex:1;
+    border: none;
+    outline:none;
+    background: transparent;
+    padding:10px;
+    font-weight: 14px;
+    color: #e52e71;
+}
+button{
+    border:none;
+    outline: none;
+    padding: 16px 50px;
+    background: radial-gradient(circle, #ff8a00,#e52e71);
+    cursor: pointer;
+    border-radius: 40px;
+}
+button:hover{
+    box-shadow: 0 0 20px rgba(240, 234, 234, 0.6);
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content:'';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image:url(unchecked.png);
+    background-size:cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked{
+    color:#da4910;
+}
+ul li.checked::before{
+    background-image: url(checked.png);
+}
+ul li span{
+    position:absolute;
+    right:20px;
+    top:5px;
+    width:85px;
+    height:40px;
+    font-size: 22px;
+    line-height:40px;
+    text-align: center;
+    background-clip: text;
+    color:transparent;
+    background-image: radial-gradient(circle, #ff8a00,#e52e71);
+}
+ul li span:hover{
+    background: radial-gradient(circle, #ff8a00,#e52e71);
+    color: #000;
+    border-radius: 30px;
+    font-weight: 100;
+    font-size: medium;
+    box-shadow:0 0 20px rgba(240, 234, 234, 0.6) ;
+}
